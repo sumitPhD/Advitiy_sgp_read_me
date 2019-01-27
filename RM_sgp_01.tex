@@ -1,0 +1,71 @@
+\documentclass[a4paper, oneside,11pt]{article}
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{xcolor}
+%\usepackage{booktabs}
+\usepackage{float}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage[backend=biber,
+    style=numeric,sorting=none]{biblatex}
+\addbibresource{ref.bib}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+\graphicspath{{/}}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{upgreek}
+\usepackage{enumitem}  
+\usepackage{comment} 
+\usepackage{upgreek}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{table}[h]
+		\begin{adjustbox}{width = \linewidth}
+			\begin{tabular}{c c c}
+				\multirow{5}{*}{ \includegraphics[width=0.13\textwidth]{iitb_logo.png}} \hfill &  \large{{Student Satellite Project}}  & \hfill \multirow{5}{*}{ \includegraphics[width=0.13\textwidth]{pratham_logo.png}} \\
+				& {Indian Institute of Technology, Bombay} &\\
+				& {Powai, Mumbai - 400076, INDIA} &\\
+				&{} &\\
+				& Website: {www.aero.iitb.ac.in/satlab} &\\
+				\\
+				&\large{\textbf{Readme file for sgp.py}}&\\
+				&Attitude Determination and Control Subsystem&\\
+				\hline
+			\end{tabular}
+		\end{adjustbox}
+\end{table}
+\section*{}
+\textbf{Author:Sumit Agrawal}\\
+\textbf{Date:23 July 2018}\\
+sgp.py takes following input from getorbitdata.py and given postion and velocity of satellite in ECI frame in m and m/s. \\
+Input:MeanMo - Mean motion in revolution per day\\
+Eccen - Eccentricity\\
+Incl\_deg - Inclination in degrees \\
+MeanAnamoly\_deg - Mean Anamoly in degrees \\
+ArgP - Argument of perigee in degrees \\
+RAAN\_deg - Right ascension of ascending node in degrees\\
+DMeanMotion - First time derivation of mean motion divided by 2 \\
+DDMeanMotion - Second time derivation of mean motion divided by 6 \\
+BStar - BSTAR drag term\\
+Output: Postion and velocity of satellite in ECI frame in m and m/s. \\
+
+References:
+
+
+\printbibliography 
+\end{document}

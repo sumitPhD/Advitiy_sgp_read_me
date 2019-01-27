@@ -1,0 +1,80 @@
+\documentclass[a4paper, oneside,11pt]{article}
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{xcolor}
+%\usepackage{booktabs}
+\usepackage{float}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage[backend=biber,
+    style=numeric,sorting=none]{biblatex}
+\addbibresource{ref.bib}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+\graphicspath{{/}}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{upgreek}
+\usepackage{enumitem}  
+\usepackage{comment} 
+\usepackage{upgreek}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{table}[h]
+		\begin{adjustbox}{width = \linewidth}
+			\begin{tabular}{c c c}
+				\multirow{5}{*}{ \includegraphics[width=0.13\textwidth]{iitb_logo.png}} \hfill &  \large{{Student Satellite Project}}  & \hfill \multirow{5}{*}{ \includegraphics[width=0.13\textwidth]{pratham_logo.png}} \\
+				& {Indian Institute of Technology, Bombay} &\\
+				& {Powai, Mumbai - 400076, INDIA} &\\
+				&{} &\\
+				& Website: {www.aero.iitb.ac.in/satlab} &\\
+				\\
+				&\large{\textbf{Readme file for OrbitElements2TLE.py}}&\\
+				&Attitude Determination and Control Subsystem&\\
+				\hline
+			\end{tabular}
+		\end{adjustbox}
+\end{table}
+\section*{}
+\textbf{Author: Sumit Agrawal}\\
+\textbf{Date:08 July 2018}\\
+This code creates Two Line Elements (TLE) from orbital elements.\\
+Input: Orbital Elements \{Inclination (degrees),Right ascension of the ascending node (degrees), Eccentricity, Argument of perigee (degrees) ,Mean Anomaly (degrees),Mean Motion (revolutions per day) \}; First time derivative of mean motion;  Second time derivative of mean motion; Bstar; Epoach year; Epoach and  other parameter {Satellite No., Class No., International designator}\\
+
+Output:Two Line Element. \\
+A test code is written to check if the TLE is coming proper or not.\\
+References:\\
+ \url{https://en.wikipedia.org/wiki/Two-line_element_set}\\
+			\url{https://www.celestrak.com/NORAD/documentation/tle-fmt.asp}\\
+\url{https://celestrak.com/NORAD/documentation/spacetrk.pdf} page 81\\
+
+One should be careful while assigning  the variables of the code. As the TLE is specific about the total length, location of signs and spaces. One must check with the test code test$\_$OrbitElements2TLE$\cdot$py after editing this code (OrbitElements2TLE$\cdot$py).
+
+SGP is affected by only following parameters.
+\begin{enumerate}
+\item Mean Motion
+\item Eccentricity
+\item Inclination
+\item Mean Anomaly
+\item Argument of perigee
+\item Right ascension of the ascending node
+\item First time derivative of mean motion
+\item Second time derivative of mean motion
+\item BStar
+\end{enumerate}
+\printbibliography 
+\end{document}
